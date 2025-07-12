@@ -31,7 +31,7 @@
 <body>
 
 <div class="container-fluid header text-center">
-    <h1>Ravindra Naik</h1>
+    <h1>Bindu</h1>
     <h4>Senior DevOps Engineer | Cloud & Automation Enthusiast</h4>
 </div>
 
