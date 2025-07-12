@@ -1,54 +1,81 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.net.*" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>KK FUNDA Home Page</title>
-<link href="images/kkfunda.jpg" rel="icon">
-</head>
+    <meta charset="UTF-8">
+    <title>Ravindra Naik | DevOps Engineer</title>
+    <link rel="icon" href="images/devops-icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #e0f7fa, #ffffff);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .header, .footer {
+            background-color: #004d40;
+            color: white;
+            padding: 20px 0;
+        }
+        .content-section {
+            padding: 30px;
+        }
+        h1, h2, h3 {
+            color: #00695c;
+        }
+        .project-list li {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-<h1 align="center">Welcome to KKKKKKKKKK KK DevOps</h1>
-<h1 align="center"> KK FUNDA</h1>
-<hr>
-<br>
-	<h1><h3> Server Side IP Address </h3><br>
 
-<% 
-String ip = "";
-InetAddress inetAddress = InetAddress.getLocalHost();
-ip = inetAddress.getHostAddress();
-out.println("Server Host Name :: "+inetAddress.getHostName()); 
-%>
-<br>
-<%out.println("Server IP Address :: "+ip);%>
-</h1>
-<br>
-<h1><h3> Client Side IP Address </h3><br>
-<%out.print( "Client IP Address :: " + request.getRemoteAddr() ); %><br>
-<%out.print( "Client Name Host :: "+ request.getRemoteHost() );%><br></h1>
-<hr>
-<div style="text-align: center;">
-	<span>
-		<img src="images/kkfunda.jpg" alt="" width="100">
-	</span>
-	<span style="font-weight: bold;">
-		KK FUNDA, 
-		Martha Halli, Banglore,
-		Bangalore,
-		+91-9676831734,+91-9676831734
-		kkeducationblr@gmail.com
-		<br>
-		<a href="mailto:kkeducation@gmail.com">Mail to KK FUNDA</a>
-	</span>
+<div class="container-fluid header text-center">
+    <h1>Ravindra Naik</h1>
+    <h4>Senior DevOps Engineer | Cloud & Automation Enthusiast</h4>
 </div>
-<hr>
-	<p> Service : <a href="services/employee/getEmployeeDetails">Get Employee Details </p>
-<hr>
-<hr>
-<p align=center>KK FUNDA Training, Development Center.</p>
-<p align=center><small>Copyrights 2024 by <a href="google.com/">KK FUNDA</a> </small></p>
+
+<div class="container content-section">
+    <h2>About Me</h2>
+    <p>Hello! I’m <strong>Ravindra Naik</strong>, a passionate and experienced DevOps Engineer with a strong background in AWS cloud services, CI/CD pipelines, Infrastructure as Code, and containerization technologies.</p>
+
+    <h3>🔧 Skills & Tools</h3>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">☁️ AWS: EC2, S3, VPC, RDS, Route 53, CloudFormation, IAM, Lambda</li>
+        <li class="list-group-item">🐳 Docker, Kubernetes (EKS), Helm</li>
+        <li class="list-group-item">⚙️ CI/CD: Jenkins, GitHub Actions, GitLab CI</li>
+        <li class="list-group-item">🔐 Terraform, Ansible, Shell Scripting</li>
+        <li class="list-group-item">📈 Monitoring: Prometheus, Grafana, CloudWatch</li>
+    </ul>
+
+    <h3>💼 Projects</h3>
+    <ul class="project-list">
+        <li>✔️ Migrated on-premise apps to AWS with fully automated infrastructure using Terraform</li>
+        <li>✔️ Deployed scalable microservices using Docker and Kubernetes (EKS)</li>
+        <li>✔️ Designed CI/CD pipelines with Jenkins, GitHub Actions, and AWS CodeDeploy</li>
+        <li>✔️ Implemented real-time monitoring with Prometheus + Grafana for production apps</li>
+    </ul>
+
+    <h3>🌍 Server Info</h3>
+    <p>
+        <% 
+            InetAddress inetAddress = InetAddress.getLocalHost();
+            String serverIp = inetAddress.getHostAddress();
+            out.println("Server Hostname: " + inetAddress.getHostName() + "<br>");
+            out.println("Server IP Address: " + serverIp + "<br>");
+        %>
+        Client IP: <%= request.getRemoteAddr() %> <br>
+        Client Host: <%= request.getRemoteHost() %>
+    </p>
+
+    <h3>📫 Contact Me</h3>
+    <p>Email: <a href="mailto:ravindranaik.devops@gmail.com">ravindranaik.devops@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/ravindranaik" target="_blank">linkedin.com/in/ravindranaik</a></p>
+</div>
+
+<div class="container-fluid footer text-center">
+    <p>&copy; 2025 Ravindra Naik | DevOps Engineer | All Rights Reserved</p>
+</div>
 
 </body>
 </html>
