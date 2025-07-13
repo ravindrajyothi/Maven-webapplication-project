@@ -31,7 +31,7 @@
 <body>
 
 <div class="container-fluid header text-center">
-    <h1>Ravindra</h1>
+    <h1>Ravindra Naik Khatravat</h1>
     <h4>Senior DevOps Engineer | Cloud & Automation Enthusiast</h4>
 </div>
 
