@@ -37,7 +37,7 @@
 
 <div class="container content-section">
     <h2>About Me</h2>
-    <p>Hello! I’m <strong>Bindu Hima</strong>, a passionate and experienced DevOps Engineer with a strong background in AWS cloud services, CI/CD pipelines, Infrastructure as Code, and containerization technologies.</p>
+    <p>Hello! I’m <strong>Saraswathi</strong>, a passionate and experienced DevOps Engineer with a strong background in AWS cloud services, CI/CD pipelines, Infrastructure as Code, and containerization technologies.</p>
 
     <h3>🔧 Skills & Tools</h3>
     <ul class="list-group list-group-flush">
