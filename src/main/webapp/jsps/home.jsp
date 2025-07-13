@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title> Ravindra Naik Khatravat| DevOps & SRE Engineer</title>
+    <title> Hima Bindu| DevOps & SRE Engineer</title>
     <link rel="icon" href="images/devops-icon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -31,13 +31,13 @@
 <body>
 
 <div class="container-fluid header text-center">
-    <h1>Ravindra Naik Khatravat</h1>
+    <h1>Hima Bindu</h1>
     <h4>Senior DevOps Engineer | Cloud & Automation Enthusiast</h4>
 </div>
 
 <div class="container content-section">
     <h2>About Me</h2>
-    <p>Hello! I’m <strong>Bindu</strong>, a passionate and experienced DevOps Engineer with a strong background in AWS cloud services, CI/CD pipelines, Infrastructure as Code, and containerization technologies.</p>
+    <p>Hello! I’m <strong>Bindu </strong>, a passionate and experienced DevOps Engineer with a strong background in AWS cloud services, CI/CD pipelines, Infrastructure as Code, and containerization technologies.</p>
 
     <h3>🔧 Skills & Tools</h3>
     <ul class="list-group list-group-flush">
