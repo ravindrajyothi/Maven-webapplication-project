@@ -31,13 +31,13 @@
 <body>
 
 <div class="container-fluid header text-center">
-    <h1>Ravindra Naik Khatravat vari</h1>
+    <h1>Ravindra Naik Khatravat</h1>
     <h4>Senior DevOps Engineer | Cloud & Automation Enthusiast</h4>
 </div>
 
 <div class="container content-section">
     <h2>About Me</h2>
-    <p>Hello! I’m <strong>Bindu</strong>, a passionate and experienced DevOps Engineer with a strong background in AWS cloud services, CI/CD pipelines, Infrastructure as Code, and containerization technologies.</p>
+    <p>Hello! I’m <strong>Bindu Hima</strong>, a passionate and experienced DevOps Engineer with a strong background in AWS cloud services, CI/CD pipelines, Infrastructure as Code, and containerization technologies.</p>
 
     <h3>🔧 Skills & Tools</h3>
     <ul class="list-group list-group-flush">
