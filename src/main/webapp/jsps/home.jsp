@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title> Hima Bindu| DevOps & SRE Engineer</title>
+    <title> Ravindra Naik| DevOps & SRE Engineer</title>
     <link rel="icon" href="images/devops-icon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -31,7 +31,7 @@
 <body>
 
 <div class="container-fluid header text-center">
-    <h1>Hima Bindu</h1>
+    <h1>Bindu</h1>
     <h4>Senior DevOps Engineer | Cloud & Automation Enthusiast</h4>
 </div>
 
