@@ -69,7 +69,7 @@
     </p>
 
     <h3>📫 Contact Me</h3>
-    <p>Email: <a href="mailto:ravindranaik.devops@gmail.com">ravindranaik.devops@gmail.com</a></p>
+    <p>Email: <a href="mailto:himabindu.devops@gmail.com">himabindu.devops@gmail.com</a></p>
     <p>LinkedIn: <a href="https://linkedin.com/in/ravindranaik" target="_blank">linkedin.com/in/ravindranaik</a></p>
 </div>
 
