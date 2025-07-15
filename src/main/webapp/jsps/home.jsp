@@ -31,7 +31,7 @@
 <body>
 
 <div class="container-fluid header text-center">
-    <h1>Hima Bindu</h1>
+    <h1>Hima Bindu Good</h1>
     <h4>Senior DevOps Engineer | Cloud & Automation Enthusiast</h4>
 </div>
 
