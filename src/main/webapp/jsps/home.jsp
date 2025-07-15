@@ -70,7 +70,7 @@
 
     <h3>📫 Contact Me</h3>
     <p>Email: <a href="mailto:himabindu.devops@gmail.com">himabindu.devops@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/ravindranaik" target="_blank">linkedin.com/in/ravindranaik</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/himabindu" target="_blank">linkedin.com/in/ravindranaik</a></p>
 </div>
 
 <div class="container-fluid footer text-center">
