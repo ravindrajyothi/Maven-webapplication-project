@@ -66,7 +66,7 @@ pipeline {
                     }
 
                     sh """
-                        curl -u Ravindra:bindu \\
+                        curl -u ravindra:password \\
                         --upload-file /var/lib/jenkins/workspace/${env.JOB_NAME}/target/maven-web-application.war \\
                         "${deployUrl}/manager/text/deploy?path=/maven-web-application&update=true"
                     """
