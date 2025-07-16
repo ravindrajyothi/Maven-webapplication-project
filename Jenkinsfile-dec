@@ -28,7 +28,7 @@ node
         echo "Deploying WAR file using curl..."
 
         sh """
-            curl -u ravindra:password \
+            curl -u Ravindra:bindu \
             --upload-file /var/lib/jenkins/workspace/Ravi/target/maven-web-application.war \
             "http://52.207.135.214:9090/manager/text/deploy?path=/maven-web-application&update=true"
         """
