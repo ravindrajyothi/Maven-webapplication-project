@@ -1,112 +1,36 @@
-pipeline {
-    agent any
-
-    tools {
-        maven 'maven-3.9.9'
+//scripted pipeline starts with node
+node
+{
+    def mavenHome=tool name: "maven-3.9.9"
+// from here we need open stage tag and write content with in stage and we can take different stages    
+    stage('checkout')
+    {
+        git branch: 'development', url: 'https://github.com/ravindrajyothi/Maven-webapplication-project.git'
     }
-
-    parameters {
-        string(name: 'BRANCH_NAME', defaultValue: 'development', description: 'Git branch to build from')
-        choice(name: 'DEPLOY_ENV', choices: ['dev', 'staging', 'prod'], description: 'Select the deployment environment')
-        booleanParam(name: 'RUN_SONAR', defaultValue: true, description: 'Run SonarQube analysis?')
+    stage('Compile')
+    {
+        sh "${mavenHome}/bin/mvn clean package"
     }
-
-    triggers {
-        // Poll SCM every minute
-        pollSCM('* * * * *')
-
-        // Build periodically every minute (just for testing; adjust this in production!)
-        //cron('* * * * *')
+    stage('Build Stage')
+    {
+    sh "${mavenHome}/bin/mvn clean package"
     }
-
-    stages {
-        stage('Git checkout') {
-            steps {
-                git branch: "${params.BRANCH_NAME}", url: 'https://github.com/ravindrajyothi/Maven-webapplication-project.git'
-            }
-        }
-
-        stage('Compile stage') {
-            steps {
-                sh "mvn clean package"
-            }
-        }
-
-        stage("Build stage") {
-            steps {
-                sh "mvn clean package"
-            }
-        }
-
-        stage('Sonar report') {
-            when {
-                expression { return params.RUN_SONAR }
-            }
-            steps {
-                sh "mvn sonar:sonar"
-            }
-        }
-
-        stage('Nexus backup') {
-            steps {
-                sh "mvn deploy"
-            }
-        }
-
-        stage('Deploy to Tomcat') {
-            steps {
-                script {
-                    def deployUrl = ''
-                    if (params.DEPLOY_ENV == 'dev') {
-                        deployUrl = "http://52.207.135.214:9090"
-                    } else if (params.DEPLOY_ENV == 'staging') {
-                        deployUrl = "http://staging-server:9090"
-                    } else if (params.DEPLOY_ENV == 'prod') {
-                        deployUrl = "http://prod-server:9090"
-                    }
-
-                    sh """
-                        curl -u ravindra:password \
-                        --upload-file /var/lib/jenkins/workspace/${env.JOB_NAME}/target/maven-web-application.war \\
-                        "${deployUrl}/manager/text/deploy?path=/maven-web-application&update=true"
-                    """
-                }
-            }
-        }
+    stage('SQ Report')
+    {
+        sh "${mavenHome}/bin/mvn clean sonar:sonar package"
     }
-
-    post {
-        success {
-            script {
-                notifyBuild(currentBuild.result)
-            }
-        }
-        failure {
-            script {
-                notifyBuild(currentBuild.result)
-            }
-        }
+    stage('Nexus Backup')
+    {
+    sh "${mavenHome}/bin/mvn clean deploy"
     }
-}
+    stage('Deploy to Tomcat')
+    {
+        echo "Deploying WAR file using curl..."
 
-// Notification method (must be placed outside the pipeline block)
-def notifyBuild(String buildStatus = 'STARTED') {
-    buildStatus = buildStatus ?: 'SUCCESS'
-
-    def colorCode
-    def subject = "${buildStatus}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'"
-    def summary = "${subject} (${env.BUILD_URL})"
-
-    switch (buildStatus) {
-        case 'STARTED':
-            colorCode = '#FFFF00' // Yellow
-            break
-        case 'SUCCESS':
-            colorCode = '#00FF00' // Green
-            break
-        default:
-            colorCode = '#FF0000' // Red
+        sh """
+            curl -u ravindra:password \
+            --upload-file /var/lib/jenkins/workspace/Ravi/target/maven-web-application.war \
+            "http://52.207.135.214:9090/manager/text/deploy?path=/maven-web-application&update=true"
+        """
     }
-
-    slackSend(color: colorCode, message: summary, channel: '#devops-enthusiast')
 }
