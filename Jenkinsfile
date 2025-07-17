@@ -45,7 +45,7 @@ node
 
       curl -u ravindra:password \
 --upload-file /var/lib/jenkins/workspace/airtel-MBPL/target/maven-web-application.war \
-"http://52.207.135.214:9090//manager/text/deploy?path=/maven-web-application&update=true"
+"http://52.207.135.214:9090/manager/text/deploy?path=/maven-web-application&update=true"
           
         """
     }
