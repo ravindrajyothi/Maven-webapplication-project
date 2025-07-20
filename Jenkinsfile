@@ -28,7 +28,7 @@ pipeline{
            steps{
         sh """
             curl -u Ravindra:bindu \
-            --upload-file /var/lib/jenkins/workspace/jio-dec-PL/target/maven-web-application.war \
+            --upload-file /var/lib/jenkins/workspace/Ravindra/target/maven-web-application.war \
             "http://52.207.135.214:9090/manager/text/deploy?path=/maven-web-application&update=true"
         """
 
