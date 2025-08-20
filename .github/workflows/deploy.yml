@@ -1,0 +1,7 @@
+mkdir -p .github/workflows
+nano .github/workflows/deploy.yml
+# (paste the workflow content, save and exit nano)
+
+git add .github/workflows/deploy.yml
+git commit -m "Add GitHub Actions workflow for CI/CD"
+git push origin development  # or your branch name
